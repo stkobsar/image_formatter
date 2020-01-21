@@ -29,7 +29,7 @@ def transform(RAW_FOLDER, folder):
 if __name__ == "__main__":
 
     #############ARGPARSE########
-    parser = argparse.ArgumentParser(description='Transform Raw to JPEG')
+    parser = argparse.ArgumentParser(description='Transform ORF to JPEG')
     parser.add_argument('input_folder', type=str, help='insert folder containing .ORF photos')
     parser.add_argument('--output_folder', default="Output_jpg" ,type=str, help='insert output folder for the JPEG photos')
     args = parser.parse_args()
