@@ -1,6 +1,6 @@
 import pytest
 import os
-import proj1.main as mn
+import image_formatter.main as mn
 
 
 absolute_path_every_machine = os.path.abspath(__file__)
