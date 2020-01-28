@@ -1,6 +1,3 @@
-from sphinx.builders.html import StandaloneHTMLBuilder
-StandaloneHTMLBuilder.supported_image_types = ['image/svg+xml','image/gif','image/png','image/jpg']
-
 
 Command line
 ==================
@@ -11,13 +8,27 @@ In order to transfor .ORF to .JPG you must run:
 
 ::
 
-   python main.py /path/to/folder/with/ORFpictures/ /path/to/output/folder//
+   python -m image_formatter.main /path/to/folder/with/ORFpictures/
 
 Example:
 
 ::
 
-   python main.py /Users/stephi/picturesORF/ /Users/stephi/output_folder/
+   python -m image_formatter.main /Users/stephi/picturesORF/ 
+
+
+
+If you want to specify the output folder run:
+
+::
+
+   python -m  image_formatter.main /path/to/folder/with/ORFpictures/ --output_folder /path/to/output/folder/
+
+Example
+
+::
+
+   python -m image_formatter.main /Users/stephi/picturesORF/ --output_folder output_jpg
 
 
 GIF to use it!

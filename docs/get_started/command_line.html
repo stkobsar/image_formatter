@@ -164,16 +164,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>from sphinx.builders.html import StandaloneHTMLBuilder
-StandaloneHTMLBuilder.supported_image_types = [‘image/svg+xml’,’image/gif’,’image/png’,’image/jpg’]</p>
-<div class="section" id="command-line">
+  <div class="section" id="command-line">
 <h1>Command line<a class="headerlink" href="#command-line" title="Permalink to this headline">¶</a></h1>
 <p>In order to transfor .ORF to .JPG you must run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">folder</span><span class="o">/</span><span class="k">with</span><span class="o">/</span><span class="n">ORFpictures</span><span class="o">/</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">folder</span><span class="o">//</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">image_formatter</span><span class="o">.</span><span class="n">main</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">folder</span><span class="o">/</span><span class="k">with</span><span class="o">/</span><span class="n">ORFpictures</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>Example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">stephi</span><span class="o">/</span><span class="n">picturesORF</span><span class="o">/</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">stephi</span><span class="o">/</span><span class="n">output_folder</span><span class="o">/</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">image_formatter</span><span class="o">.</span><span class="n">main</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">stephi</span><span class="o">/</span><span class="n">picturesORF</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>If you want to specify the output folder run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span>  <span class="n">image_formatter</span><span class="o">.</span><span class="n">main</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">folder</span><span class="o">/</span><span class="k">with</span><span class="o">/</span><span class="n">ORFpictures</span><span class="o">/</span> <span class="o">--</span><span class="n">output_folder</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">folder</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">image_formatter</span><span class="o">.</span><span class="n">main</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">stephi</span><span class="o">/</span><span class="n">picturesORF</span><span class="o">/</span> <span class="o">--</span><span class="n">output_folder</span> <span class="n">output_jpg</span>
 </pre></div>
 </div>
 <p>GIF to use it!</p>
