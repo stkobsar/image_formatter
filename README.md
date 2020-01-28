@@ -1,10 +1,8 @@
-# proj1
-Aprendiendo GitHub
+# Image Formatter
 
-Author: stkobsar
+Transform image .ORF to jpg and more!
 
-## Summary of the project
 
-proj1 -->
+## Docs
 
-proj2 -->
+https://stkobsar.github.io/image_formatter/
