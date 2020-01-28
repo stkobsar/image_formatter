@@ -1,0 +1,34 @@
+package:
+  name: image_formatter
+  version: "1.0.0"
+
+about:
+  home: https://github.com/stkobsar/image_formatter
+  license: Apache
+  license_file: LICENSE
+  summary: Change photo formats
+
+source:
+  path: ../
+
+build:
+  script: python -m pip install . --no-deps -vv
+  number: 0
+
+requirements:
+  host:
+    - python
+
+  run:
+    # Base dependencies
+    - python
+    - Pillow
+    - imageio
+
+test:
+  imports:
+    - image_formatter
+  source_files:
+    - tests
+  requires:
+    - pytest

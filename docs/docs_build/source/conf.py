@@ -19,7 +19,7 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'proj1'
+project = 'image_formatter'
 copyright = '2020, Stefanie Kobsar Rodriguez'
 author = 'Stefanie Kobsar Rodriguez'
 
