@@ -19,7 +19,7 @@ jobs:
     - name: Install via Conda
       run: |
         conda install -c stkobsar7 image_formatter
-     	conda install pytest
+        conda install pytest
     - name: Test with pytest
       run:
         python -m pytest tests 
