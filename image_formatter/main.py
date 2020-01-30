@@ -17,6 +17,7 @@ def transform(RAW_FOLDER, folder):
     photos = glob.glob(RAW_FOLDER + "*.ORF")
     if not os.path.exists(folder):
         os.mkdir(folder)
+    deda
     
     for photo in photos:
         photo_jpg = photo.strip(".ORF") + ".jpg"
