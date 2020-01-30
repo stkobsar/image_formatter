@@ -18,8 +18,8 @@ jobs:
         echo ::add-path::$CONDA/condabin
     - name: Install via Conda
       run: |
-        conda install -c stkobsar7 image_formatter
-        conda install pytest
+        sudo conda install -c stkobsar7 image_formatter
+        sudo conda install pytest
     - name: Test with pytest
       run:
         python -m pytest tests 
