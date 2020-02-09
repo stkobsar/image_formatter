@@ -4,7 +4,6 @@ import glob
 import os
 
 
-
 def transform_png_jpg(png_image, output):
     im = Image.open(png_image)
     im.convert('RGB').save(output, "JPEG") #this converts png image as jpeg
