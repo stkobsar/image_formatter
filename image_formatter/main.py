@@ -21,13 +21,15 @@ def transform(RAW_FOLDER, folder, format):
             os.mkdir(folder)
         
         for photo in photos:
-            photo_jpg = photo.rsplit(".",1)[0] + ".jpg"
-            photo_folder = os.path.join(folder, os.path.basename(photo_jpg))
-            print(photo_folder)
-            if format.upper() == "ORF":
-                orf.transform_raw_jpg(photo, photo_folder)
-            elif format.upper() == "PNG":
-                png.transform_png_jpg(photo, photo_folder)
+            photo = Photo(photo, folder)
+            photo.transoform()
+            #photo_jpg = photo.rsplit(".",1)[0] + ".jpg"
+            #photo_folder = os.path.join(folder, os.path.basename(photo_jpg))
+            #print(photo_folder)
+            #if format.upper() == "ORF":
+            #    orf.transform_raw_jpg(photo, photo_folder)
+            #elif format.upper() == "PNG":
+            #    png.transform_png_jpg(photo, photo_folder)
     else:
         raise ValueError("Format not supported. Please choose between options {}".format(SUPPORTED_FORMATS))
 
