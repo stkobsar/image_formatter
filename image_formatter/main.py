@@ -11,22 +11,25 @@ import image_formatter.transform_algorithm.png as png
 SUPPORTED_FORMATS = ["ORF", "PNG", "RAW", "BMP"]
 
 
-def transform(RAW_FOLDER, folder, format):
+def transform(input_folder, output_folder, format):
+
     if format.upper() in SUPPORTED_FORMATS:
-        input_path = RAW_FOLDER + "*.{}".format(format.upper())
+        input_path = input_folder + ".{}".format(format.upper())
         photos = glob.glob(input_path)
 
         if not photos:
-            input_path = RAW_FOLDER + "*.{}".format(format.lower())
+            input_path = input_folder + ".{}".format(format.lower())
         photos = glob.glob(input_path)
-        if not os.path.exists(folder):
-            os.mkdir(folder)
-        
+        if not os.path.exists(output_folder):
+            os.mkdir(output_folder)
+
+
         for photo in photos:
-            photo = photo(photo, folder)
+            print(photo)
+            photo = photo(photo, output_folder)
             photo.transoform()
             photo_jpg = photo.rsplit(".", 1)[0] + ".jpg"
-            photo_folder = os.path.join(folder, os.path.basename(photo_jpg))
+            photo_folder = os.path.join(output_folder, os.path.basename(photo_jpg))
             print(photo_folder)
             if format.upper() == "ORF":
                 orf.transform_raw_jpg(photo, photo_folder)
