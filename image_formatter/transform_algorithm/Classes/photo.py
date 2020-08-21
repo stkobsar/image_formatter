@@ -1,5 +1,5 @@
-import image_formatter.transform_algorithm.orf as orf
-import image_formatter.transform_algorithm.png as png
+import image_formatter.transform_algorithm.formats.orf as orf
+import image_formatter.transform_algorithm.formats.png as png
 import os
 
 
@@ -10,15 +10,14 @@ class Photo():
             self.path = path
             photo_jpg = self.path.rsplit(".",1)[0] + ".jpg"
             self.output = os.path.join(output_folder, os.path.basename(photo_jpg))
-            self.input_format = input_format
+            self.input_format = input_format.lower()
 
         def transform(self):
             if self.input_format == "orf":
                 orf.transform_raw_jpg(self.path, self.output)
             elif self.input_format == "png":
                 png.transform_png_jpg(self.path, self.output)
-            else:
-                print("Format has to be orf or png")
+
 
 
 
