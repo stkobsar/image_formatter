@@ -1,7 +1,7 @@
 import pytest
 import os
-import image_formatter.transform_algorithm.orf as orf
-import image_formatter.transform_algorithm.png as png
+import image_formatter.transform_algorithm.formats.orf as orf
+import image_formatter.transform_algorithm.formats.png as png
 
 
 absolute_path_every_machine = os.path.abspath(__file__)
