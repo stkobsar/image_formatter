@@ -1,3 +1,5 @@
+#conda-build conda_recipe --python 3.8 (para subir a conda en python 3.8)
+
 package:
   name: image_formatter
   version: "1.0.0"
